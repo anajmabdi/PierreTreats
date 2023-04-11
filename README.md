@@ -76,7 +76,7 @@ You must make sure the following software packages are locally installed in orde
 
 
 # <div align="center"> Known bugs </div>
-None
+Flavor page is broken.
 <p>&nbsp;</p>
 
 #### License
