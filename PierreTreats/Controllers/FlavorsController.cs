@@ -6,27 +6,27 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PierreTreats.Controllers
 {
-    public class TreatsController : Controller
+    public class FlavorsControllers : Controller
     {
         private readonly PierreTreatsContext _db;
 
-        public TreatsController(PierreTreatsContext db)
+        public FlavorsControllers(PierreTreatsContext db)
         {
             _db = db;
         }
 
         public ActionResult Index()
         {
-            return View(_db.Treats.ToList());
+            return View(_db.Flavors.ToList());
         }
 
         public ActionResult Details(int id)
         {
-            Treat thisTreat = _db.Treats
-                .Include(treat => treat.JoinEntities)
-                .ThenInclude(join => join.Flavor)
-                .FirstOrDefault(treat => treat.TreatId == id);
-            return View(thisTreat);
+            Flavor thisFlavor = _db.Flavors
+                .Include(flavor => flavor.JoinEntities)
+                .ThenInclude(join => join.Treat)
+                .FirstOrDefault(flavor => flavor.FlavorId == id);
+            return View(thisFlavor);
         }
 
         public ActionResult Create()
@@ -35,58 +35,58 @@ namespace PierreTreats.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Treat treat)
+        public ActionResult Create(Flavor flavor)
         {
-            _db.Treats.Add(treat);
+            _db.Flavors.Add(flavor);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult AddFlavor(int id)
+        public ActionResult AddTreat(int id)
         {
-            Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
             ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Description");
-            return View(thisTreat);
+            return View(thisFlavor);
         }
 
         [HttpPost]
-        public ActionResult AddFlavor(Treat treat, int flavorId)
+        public ActionResult AddTreat(Flavor flavor, int treatId)
         {
 #nullable enable
-            TreatFlavor? joinEntity = _db.TreatFlavors.FirstOrDefault(join => (join.FlavorId == flavorId && join.TreatId == treat.TreatId));
+            TreatFlavor? joinEntity = _db.TreatFlavors.FirstOrDefault(join => (join.TreatId == treatId && join.FlavorId == flavor.FlavorId));
 #nullable disable
-            if (joinEntity == null && flavorId != 0)
+            if (joinEntity == null && treatId != 0)
             {
-                _db.TreatFlavors.Add(new TreatFlavor() { FlavorId = flavorId, TreatId = treat.TreatId });
+                _db.TreatFlavors.Add(new TreatFlavor() { TreatId = treatId, FlavorId = flavor.FlavorId });
                 _db.SaveChanges();
             }
-            return RedirectToAction("Details", new { id = treat.TreatId });
+            return RedirectToAction("Details", new { id = flavor.FlavorId });
         }
 
         public ActionResult Edit(int id)
         {
-            Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
-            return View(thisTreat);
+            Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
+            return View(thisFlavor);
         }
 
         [HttpPost]
-        public ActionResult Edit(Treat treat)
+        public ActionResult Edit(Flavor flavor)
         {
-            _db.Treats.Update(treat);
+            _db.Flavors.Update(flavor);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult Delete(int id)
         {
-            Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
-            return View(thisTreat);
+            Flavor thisFlavor = _db.Flavors.FirstOrDefault(tags => tags.FlavorId == id);
+            return View(thisFlavor);
         }
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Treat thisTreat = _db.Treats.FirstOrDefault(tags => tags.TreatId == id);
-            _db.Treats.Remove(thisTreat);
+            Flavor thisFlavor = _db.Flavors.FirstOrDefault(tags => tags.FlavorId == id);
+            _db.Flavors.Remove(thisFlavor);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
