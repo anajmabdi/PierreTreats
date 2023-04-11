@@ -1,4 +1,4 @@
-# <div align="center"> **Dr. Sillystringz's Factory**</div>
+# <div align="center"> **Pierre's Sweet and Savory Treats**</div>
 
 #### <div align="center"> By Najma Abdi </div>  
 <p>&nbsp;</p>
