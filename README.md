@@ -1,21 +1,21 @@
-**Pierre's Sweet and Savory Treats**</div>
+# **Pierre's Sweet and Savory Treats**
 
-##By Najma Abdi </div>  
+#### By Najma Abdi  
 <p>&nbsp;</p>
-Technologies Used
-- <div align="center">C#
-- <div align="center">HTML
-- <div align="center">ASP.NET Core MVC
-- <div align="center">Identity
-- <div align="center">EF Core
-- <div align="center">Markdown
-- <div align="center">Razor
-- <div align="center">MySQL
+
+## Technologies Used
+- C#
+- HTML
+- ASP.NET Core MVC
+- Identity
+- EF Core
+- Markdown
+- Razor
+- MySQL
 
 <p>&nbsp;</p>
-Description </div>
-<div align="center"> 
 
+## Description
 - User authentication will be a feature of the application using Identity. A user will have the option to log in and out. Users who are logged in will be able to create, update, and delete content. There will be read functionality available to all users.
 - Treats and flavors will have a many-to-many relationship.
 - A user can get a splash page that contains a list of all the desserts and flavors. Also, users will be able to click on a certain treat or flavor to view all the treats and flavors that are associated with it.
@@ -24,7 +24,7 @@ Description </div>
 <p>&nbsp;</p>
 
 
-# <div align="center">Installation Requirements 
+# Installation Requirements 
 You must make sure the following software packages are locally installed in order to use this application:
 - A preferred code editor (my case: VS Code)
 - .NET6
@@ -33,7 +33,7 @@ You must make sure the following software packages are locally installed in orde
 
 <p>&nbsp;</p>
 
-Setup
+## Setup
 
 - Clone the repository.
 - Launch the terminal and go to the "PierreTreats" production directory for this project.
@@ -72,11 +72,11 @@ Setup
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-Known bugs </div>
+# Known bugs
 Log off is broken
 <p>&nbsp;</p>
 
-#### License
+### License
 
 MIT License
 
