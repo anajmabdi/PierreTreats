@@ -8,6 +8,7 @@ namespace PierreTreats.Models
         public string Name {get; set; }
 
         public List<TreatFlavor> JoinEntities {get; set; }
+        public ApplicationUser User { get; set; }
     }
 
 }
