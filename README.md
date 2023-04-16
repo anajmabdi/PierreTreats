@@ -1,9 +1,8 @@
-# <div align="center"> **Pierre's Sweet and Savory Treats**</div>
+**Pierre's Sweet and Savory Treats**</div>
 
-#### <div align="center"> By Najma Abdi </div>  
+##By Najma Abdi </div>  
 <p>&nbsp;</p>
-
-# <div align="center"> Technologies Used
+Technologies Used
 - <div align="center">C#
 - <div align="center">HTML
 - <div align="center">ASP.NET Core MVC
@@ -14,8 +13,7 @@
 - <div align="center">MySQL
 
 <p>&nbsp;</p>
-
-# <div align="center"> Description </div>
+Description </div>
 <div align="center"> 
 
 - User authentication will be a feature of the application using Identity. A user will have the option to log in and out. Users who are logged in will be able to create, update, and delete content. There will be read functionality available to all users.
@@ -35,7 +33,7 @@ You must make sure the following software packages are locally installed in orde
 
 <p>&nbsp;</p>
 
-## <div align="center"> Setup
+Setup
 
 - Clone the repository.
 - Launch the terminal and go to the "PierreTreats" production directory for this project.
@@ -74,8 +72,7 @@ You must make sure the following software packages are locally installed in orde
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-
-# <div align="center"> Known bugs </div>
+Known bugs </div>
 Log off is broken
 <p>&nbsp;</p>
 
