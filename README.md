@@ -1,4 +1,4 @@
-# <div align="center"> **Dr. Sillystringz's Factory**</div>
+# <div align="center"> **Pierre's Sweet and Savory Treats**</div>
 
 #### <div align="center"> By Najma Abdi </div>  
 <p>&nbsp;</p>
@@ -76,7 +76,7 @@ You must make sure the following software packages are locally installed in orde
 
 
 # <div align="center"> Known bugs </div>
-None
+Log off is broken
 <p>&nbsp;</p>
 
 #### License
