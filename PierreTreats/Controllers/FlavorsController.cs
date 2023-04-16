@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PierreTreats.Controllers
 {
-    public class FlavorsControllers : Controller
+    public class FlavorsController : Controller
     {
         private readonly PierreTreatsContext _db;
 
-        public FlavorsControllers(PierreTreatsContext db)
+        public FlavorsController(PierreTreatsContext db)
         {
             _db = db;
         }
@@ -44,8 +44,8 @@ namespace PierreTreats.Controllers
 
         public ActionResult AddTreat(int id)
         {
-            Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
-            ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Description");
+            Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+            ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
             return View(thisFlavor);
         }
 

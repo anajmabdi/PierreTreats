@@ -44,7 +44,7 @@ namespace PierreTreats.Controllers
 
         public ActionResult AddFlavor(int id)
         {
-            Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            Treat thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
             ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Description");
             return View(thisTreat);
         }
@@ -57,7 +57,7 @@ namespace PierreTreats.Controllers
 #nullable disable
             if (joinEntity == null && flavorId != 0)
             {
-                _db.TreatFlavors.Add(new TreatFlavor() { FlavorId = flavorId, TreatId = treat.TreatId });
+                _db.TreatFlavors.Add(new TreatFlavor() { TreatId = treat.TreatId, FlavorId = flavorId });
                 _db.SaveChanges();
             }
             return RedirectToAction("Details", new { id = treat.TreatId });
