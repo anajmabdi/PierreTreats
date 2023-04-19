@@ -73,7 +73,6 @@ You must make sure the following software packages are locally installed in orde
 <p>&nbsp;</p>
 
 # Known bugs
-Log off is broken
 <p>&nbsp;</p>
 
 ### License
