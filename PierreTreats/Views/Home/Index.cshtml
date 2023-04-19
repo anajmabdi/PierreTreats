@@ -36,4 +36,8 @@
  
 <p>@Html.ActionLink("Manage treats", "Index", "Treats")</p> 
 <p>@Html.ActionLink("Manage flavors", "Index", "Flavors")</p>
-<p>@Html.ActionLink("Log off", "Account", "LogOff")</p>
+
+@using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" value="Log off" />
+  }

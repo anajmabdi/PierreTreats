@@ -7,6 +7,7 @@
 @if (User.Identity.IsAuthenticated)
 {
     <p>Hi @User.Identity.Name!</p>
+    <p>@Html.ActionLink("Home", "Index", "Home")</p>
 }
 else
 {
