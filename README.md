@@ -79,7 +79,7 @@ You must make sure the following software packages are locally installed in orde
 
 MIT License
 
-Copyright (c) [2022] [Najma Abdi]
+Copyright (c) [2023] [Najma Abdi]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
